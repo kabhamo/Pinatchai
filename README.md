@@ -156,8 +156,8 @@ The repo is set up for auto-deploy on push to `main`.
 - [x] Project scaffold (Next.js + Tailwind + next-intl + Sanity)
 - [x] Shared components & design system
 - [x] Landing page
-- [ ] Content pages (about, animals, activities, events, blog, gallery, visit, group visits, contact)
-- [ ] SEO (metadata, sitemap, robots) & Netlify deploy config
+- [x] Content pages (about, animals, activities, events, blog, gallery, visit, group visits, contact)
+- [x] SEO (per-page metadata, canonical + hreflang, sitemap.xml, robots.txt, dynamic OG images, LocalBusiness JSON-LD) & Netlify deploy config
 
 ---
 

@@ -36,8 +36,9 @@ export async function pageMetadata({
     alternates: {
       canonical: `${SITE.url}/${locale}${clean}`,
       languages: {
-        he: `/he${clean}`,
-        ar: `/ar${clean}`,
+        he: `${SITE.url}/he${clean}`,
+        ar: `${SITE.url}/ar${clean}`,
+        'x-default': `${SITE.url}/he${clean}`,
       },
     },
     openGraph: {

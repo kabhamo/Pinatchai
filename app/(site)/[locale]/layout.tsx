@@ -31,7 +31,12 @@ export async function generateMetadata({
       locale: locale === 'ar' ? 'ar_IL' : 'he_IL',
     },
     alternates: {
-      languages: { he: '/he', ar: '/ar' },
+      canonical: `${SITE.url}/${locale}`,
+      languages: {
+        he: `${SITE.url}/he`,
+        ar: `${SITE.url}/ar`,
+        'x-default': `${SITE.url}/he`,
+      },
     },
   };
 }
