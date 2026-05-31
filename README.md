@@ -82,6 +82,28 @@ To go live with real content:
 2. Add `NEXT_PUBLIC_SANITY_PROJECT_ID` (and dataset) to `.env.local`.
 3. Visit `/studio`, sign in, and add documents.
 
+### Seeding sample content
+
+To pre-populate a fresh Sanity dataset with the sample animals, events, blog
+posts and gallery (images are uploaded as real Sanity assets):
+
+1. In [sanity.io/manage](https://www.sanity.io/manage), open your project →
+   **API → Tokens** and create a token with **Editor** (write) permissions.
+2. Add to `.env.local`:
+   ```
+   NEXT_PUBLIC_SANITY_PROJECT_ID=your_project_id
+   NEXT_PUBLIC_SANITY_DATASET=production
+   SANITY_API_TOKEN=your_editor_token
+   ```
+3. Run:
+   ```bash
+   npm run seed
+   ```
+
+The script ([scripts/seed-sanity.ts](scripts/seed-sanity.ts)) is **idempotent** —
+re-running it updates the same documents instead of creating duplicates.
+The `SANITY_API_TOKEN` is only needed for seeding/writes, not for the public site.
+
 ---
 
 ## Project structure

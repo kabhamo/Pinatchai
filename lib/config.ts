@@ -1,5 +1,5 @@
 export const SITE = {
-  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://pinat-hai-burgata.netlify.app',
+  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://pinatchai.netlify.app',
   phone: '+972500000000',
   phoneDisplay: '050-0000000',
   email: 'info@pinat-hai-burgata.co.il',
