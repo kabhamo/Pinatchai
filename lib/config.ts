@@ -5,7 +5,7 @@ export const SITE = {
   email: 'info@pinat-hai-burgata.co.il',
   address: {
     he: 'דרך הארז 128, בורגתה',
-    ar: 'طريق الأرز 128، برطعة',
+    ar: 'طريق الأرز 128، بورغاتا',
     street: 'דרך הארז 128',
     locality: 'בורגתה',
     country: 'IL',

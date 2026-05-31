@@ -5,7 +5,7 @@ export function LocalBusinessJsonLd({ locale }: { locale: 'he' | 'ar' }) {
   const data = {
     '@context': 'https://schema.org',
     '@type': 'TouristAttraction',
-    name: locale === 'ar' ? 'ركن الحيوانات - برطعة' : 'פינת חי - בורגתה',
+    name: locale === 'ar' ? 'ركن الحيوانات - بورغاتا' : 'פינת חי - בורגתה',
     description:
       locale === 'ar' ? 'تجربة لا تُنسى لكل العائلة' : 'חוויה בלתי נשכחת לכל המשפחה',
     url: SITE.url,

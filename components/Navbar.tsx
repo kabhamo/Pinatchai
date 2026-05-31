@@ -48,7 +48,7 @@ export default function Navbar() {
               solid ? 'text-farm-green' : 'text-white drop-shadow'
             )}
           >
-            {t('home') === 'בית' ? 'פינת חי בורגתה' : 'ركن الحيوانات برطعة'}
+            {t('home') === 'בית' ? 'פינת חי בורגתה' : 'ركن الحيوانات بورغاتا'}
           </span>
         </Link>
 
