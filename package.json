@@ -1,0 +1,37 @@
+{
+  "name": "pinat-hai-burgata",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@portabletext/react": "^3.1.0",
+    "@sanity/image-url": "^1.1.0",
+    "@sanity/vision": "^3.57.4",
+    "framer-motion": "^11.5.4",
+    "lucide-react": "^0.445.0",
+    "next": "14.2.13",
+    "next-intl": "^3.19.1",
+    "next-sanity": "^9.5.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sanity": "^3.57.4",
+    "styled-components": "^6.1.13"
+  },
+  "devDependencies": {
+    "@types/node": "^20.16.5",
+    "@types/react": "^18.3.7",
+    "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "14.2.13",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.12",
+    "typescript": "^5.6.2"
+  }
+}

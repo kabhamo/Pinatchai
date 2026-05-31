@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-noto-hebrew: 'Noto Sans Hebrew', system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fafff6;
+  color: #1a1a1a;
+  font-family: var(--font-noto-hebrew);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* RTL-friendly horizontal scroll containers */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@layer components {
+  .container-farm {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+  .btn-primary {
+    @apply inline-flex min-h-[48px] items-center justify-center gap-2 rounded-pill bg-farm-orange px-7 text-lg font-bold text-white shadow-soft transition hover:brightness-105 active:scale-[0.98];
+  }
+  .btn-secondary {
+    @apply inline-flex min-h-[48px] items-center justify-center gap-2 rounded-pill bg-white px-7 text-lg font-bold text-farm-green shadow-soft ring-1 ring-farm-green/20 transition hover:bg-farm-green/5 active:scale-[0.98];
+  }
+  .card {
+    @apply rounded-card bg-white shadow-soft;
+  }
+  .section {
+    @apply py-14 sm:py-20;
+  }
+  .section-title {
+    @apply text-3xl font-extrabold text-farm-text sm:text-4xl;
+  }
+  .section-subtitle {
+    @apply mt-2 text-lg text-farm-text/60;
+  }
+}
