@@ -55,8 +55,11 @@ export default async function ContactPage({
                 </span>
                 <div>
                   <p className="text-sm font-bold text-farm-text/60">{t('phoneLabel')}</p>
-                  <a href={`tel:${SITE.phone}`} className="text-farm-text hover:text-farm-green" dir="ltr">
+                  <a href={`tel:${SITE.phone}`} className="block text-farm-text hover:text-farm-green" dir="ltr">
                     {SITE.phoneDisplay}
+                  </a>
+                  <a href={`tel:${SITE.phone2}`} className="block text-farm-text hover:text-farm-green" dir="ltr">
+                    {SITE.phone2Display}
                   </a>
                 </div>
               </li>

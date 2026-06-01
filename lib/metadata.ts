@@ -45,6 +45,13 @@ export async function pageMetadata({
       title: resolvedTitle,
       description: resolvedDescription,
       url: `${SITE.url}/${locale}${clean}`,
+      // Next does not deep-merge openGraph across segments, so re-declare the
+      // shared image here to keep it on pages that set their own openGraph.
+      images: [{ url: '/images/og.png', width: 1200, height: 630, alt: resolvedTitle }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      images: ['/images/og.png'],
     },
   };
 }

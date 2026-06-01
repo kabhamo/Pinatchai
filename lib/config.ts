@@ -1,7 +1,10 @@
 export const SITE = {
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://pinatchai.netlify.app',
-  phone: '+972500000000',
-  phoneDisplay: '050-0000000',
+  // Primary number (shown in the logo); secondary is an alternate contact.
+  phone: '+972508324133',
+  phoneDisplay: '050-832-4133',
+  phone2: '+972528578222',
+  phone2Display: '052-857-8222',
   email: 'info@pinat-hai-burgata.co.il',
   address: {
     he: 'דרך הארז 128, בורגתה',

@@ -29,6 +29,15 @@ export async function generateMetadata({
       title: t('name'),
       description: t('tagline'),
       locale: locale === 'ar' ? 'ar_IL' : 'he_IL',
+      images: [
+        { url: '/images/og.png', width: 1200, height: 630, alt: t('name') },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('name'),
+      description: t('tagline'),
+      images: ['/images/og.png'],
     },
     alternates: {
       canonical: `${SITE.url}/${locale}`,

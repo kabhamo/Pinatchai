@@ -65,11 +65,16 @@ export default function Footer() {
               <MapPin className="mt-0.5 h-5 w-5 shrink-0" />
               <span>{t('site.address')}</span>
             </li>
-            <li>
-              <a href={`tel:${SITE.phone}`} className="flex items-center gap-2 transition hover:text-white">
-                <Phone className="h-5 w-5 shrink-0" />
-                <span dir="ltr">{SITE.phoneDisplay}</span>
-              </a>
+            <li className="flex items-start gap-2">
+              <Phone className="mt-0.5 h-5 w-5 shrink-0" />
+              <span className="flex flex-col gap-1">
+                <a href={`tel:${SITE.phone}`} className="transition hover:text-white" dir="ltr">
+                  {SITE.phoneDisplay}
+                </a>
+                <a href={`tel:${SITE.phone2}`} className="transition hover:text-white" dir="ltr">
+                  {SITE.phone2Display}
+                </a>
+              </span>
             </li>
             <li>
               <a href={`mailto:${SITE.email}`} className="flex items-center gap-2 transition hover:text-white">
