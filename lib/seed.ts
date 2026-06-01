@@ -101,7 +101,7 @@ export const seedAnimals: Animal[] = [
     name_ar: 'حمار',
     category: 'livestock',
     emoji: '🫏',
-    imageUrl: img('1599491659350-9ce5f7c2f6ef'),
+    imageUrl: img('1566251037378-5e04e3bec343'),
     description_he:
       'החמור הטוב שלנו הוא חבר אמיתי. הוא רגוע, סבלני ואוהב לטיולים קצרים עם הילדים בחצר החווה.',
     description_ar:

@@ -50,13 +50,22 @@ const client = createClient({
 
 const key = () => Math.random().toString(36).slice(2, 12);
 
-/** Upload a remote image URL as a Sanity asset and return an image field. */
+/**
+ * Upload a remote image URL as a Sanity asset and return an image field.
+ * Never throws — on failure it warns and returns undefined so the document
+ * is still created (just without an image) and seeding continues.
+ */
 async function uploadImage(url: string, alt: string, filename: string) {
-  const res = await fetch(url);
-  if (!res.ok) throw new Error(`Failed to fetch ${url}: ${res.status}`);
-  const buffer = Buffer.from(await res.arrayBuffer());
-  const asset = await client.assets.upload('image', buffer, { filename });
-  return { _type: 'image', asset: { _type: 'reference', _ref: asset._id }, alt };
+  try {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`${res.status}`);
+    const buffer = Buffer.from(await res.arrayBuffer());
+    const asset = await client.assets.upload('image', buffer, { filename });
+    return { _type: 'image', asset: { _type: 'reference', _ref: asset._id }, alt };
+  } catch (err) {
+    console.warn(`(image skipped: ${(err as Error).message}) `);
+    return undefined;
+  }
 }
 
 /** Build a Portable Text body from plain paragraphs. */
