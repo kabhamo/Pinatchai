@@ -1,5 +1,5 @@
 export const SITE = {
-  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://pinatchai.netlify.app',
+  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://pinatchai.co.il',
   // Primary number (shown in the logo); secondary is an alternate contact.
   phone: '+972508324133',
   phoneDisplay: '050-832-4133',
