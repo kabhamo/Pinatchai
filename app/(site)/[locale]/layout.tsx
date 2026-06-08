@@ -7,6 +7,8 @@ import { notoHebrew } from '@/lib/fonts';
 import { SITE } from '@/lib/config';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { LocalBusinessJsonLd } from '@/components/JsonLd';
+import type { Locale } from '@/lib/types';
 import '../../globals.css';
 
 export function generateStaticParams() {
@@ -67,6 +69,8 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} dir="rtl" className={notoHebrew.variable}>
       <body className="flex min-h-screen flex-col bg-farm-bg font-sans text-farm-text">
+        {/* Site-wide LocalBusiness + TouristAttraction structured data */}
+        <LocalBusinessJsonLd locale={locale as Locale} />
         <NextIntlClientProvider messages={messages}>
           <Navbar />
           <main className="flex-1">{children}</main>
