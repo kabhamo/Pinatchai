@@ -61,7 +61,7 @@ export default function Navbar() {
                 <Link
                   href={href}
                   className={cn(
-                    'rounded-pill px-3 py-2 text-sm font-bold transition',
+                    'whitespace-nowrap rounded-pill px-3 py-2 text-sm font-bold transition',
                     solid
                       ? active
                         ? 'bg-farm-green/10 text-farm-green'
@@ -81,7 +81,7 @@ export default function Navbar() {
           <LanguageSwitcher light={!solid} />
           <Link
             href="/contact"
-            className="hidden min-h-[44px] items-center gap-1.5 rounded-pill bg-farm-orange px-4 py-2 text-sm font-bold text-white shadow-soft transition hover:brightness-105 sm:inline-flex"
+            className="hidden min-h-[44px] items-center gap-1.5 whitespace-nowrap rounded-pill bg-farm-orange px-4 py-2 text-sm font-bold text-white shadow-soft transition hover:brightness-105 sm:inline-flex"
           >
             <Phone className="h-4 w-4" />
             {t('contactCta')}

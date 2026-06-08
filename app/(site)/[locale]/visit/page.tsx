@@ -9,7 +9,7 @@ import { pageMetadata } from '@/lib/metadata';
 import { SITE } from '@/lib/config';
 
 const HERO =
-  'https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&w=1600&q=70';
+  '/images/image_1.jpeg';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: Locale } }) {
   return pageMetadata({ locale, path: '/visit', namespace: 'visit' });

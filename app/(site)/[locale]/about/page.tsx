@@ -10,8 +10,7 @@ import { pageMetadata } from '@/lib/metadata';
 
 const HERO =
   'https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=1600&q=70';
-const TEAM =
-  'https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&w=1000&q=70';
+const TEAM = '/images/image_1.jpeg';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: Locale } }) {
   const t = await getTranslations({ locale, namespace: 'about' });

@@ -1,11 +1,12 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { PawPrint, Sparkles, CalendarDays, Users, Quote, ArrowLeft } from 'lucide-react';
 import { Link } from '@/i18n/routing';
-import { getAnimals, getUpcomingEvents } from '@/lib/data';
+import { getAnimals, getUpcomingEvents, getBlogPosts } from '@/lib/data';
 import type { Locale } from '@/lib/types';
 import HeroSection from '@/components/HeroSection';
 import AnimalCard from '@/components/AnimalCard';
 import EventCard from '@/components/EventCard';
+import BlogCard from '@/components/BlogCard';
 import SectionHeading from '@/components/SectionHeading';
 import Reveal from '@/components/Reveal';
 import { LocalBusinessJsonLd } from '@/components/JsonLd';
@@ -20,7 +21,11 @@ export default async function HomePage({
 }) {
   setRequestLocale(locale);
   const t = await getTranslations('home');
-  const [animals, events] = await Promise.all([getAnimals(), getUpcomingEvents(3)]);
+  const [animals, events, posts] = await Promise.all([
+    getAnimals(),
+    getUpcomingEvents(3),
+    getBlogPosts(),
+  ]);
 
   const highlights = [
     { icon: PawPrint, key: 'animals', href: '/animals' },
@@ -174,6 +179,26 @@ export default async function HomePage({
           </div>
         </div>
       </section>
+
+      {/* Latest news / blog */}
+      {posts.length > 0 && (
+        <section className="section bg-farm-green-light/10">
+          <div className="container-farm">
+            <SectionHeading title={t('news.title')} subtitle={t('news.subtitle')} emoji="📰" />
+            <div className="grid gap-6 md:grid-cols-3">
+              {posts.slice(0, 3).map((post) => (
+                <BlogCard key={post.slug} post={post} />
+              ))}
+            </div>
+            <div className="mt-8 text-center">
+              <Link href="/blog" className="btn-secondary">
+                {t('news.cta')}
+                <ArrowLeft className="h-5 w-5" />
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* CTA banner */}
       <section className="section">
