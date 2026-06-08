@@ -21,13 +21,13 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: 'site' });
   return {
     metadataBase: new URL(SITE.url),
-    title: { default: t('name'), template: `%s · ${t('name')}` },
-    description: t('tagline'),
+    title: { default: t('metaTitle'), template: `%s · ${t('name')}` },
+    description: t('metaDescription'),
     openGraph: {
       type: 'website',
       siteName: t('name'),
-      title: t('name'),
-      description: t('tagline'),
+      title: t('metaTitle'),
+      description: t('metaDescription'),
       locale: locale === 'ar' ? 'ar_IL' : 'he_IL',
       images: [
         { url: '/images/og.png', width: 1200, height: 630, alt: t('name') },
@@ -35,8 +35,8 @@ export async function generateMetadata({
     },
     twitter: {
       card: 'summary_large_image',
-      title: t('name'),
-      description: t('tagline'),
+      title: t('metaTitle'),
+      description: t('metaDescription'),
       images: ['/images/og.png'],
     },
     alternates: {

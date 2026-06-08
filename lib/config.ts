@@ -5,7 +5,7 @@ export const SITE = {
   phoneDisplay: '050-832-4133',
   phone2: '+972528578222',
   phone2Display: '052-857-8222',
-  email: 'info@pinat-hai-burgata.co.il',
+  email: 'info@pinatchai.co.il',
   address: {
     he: 'דרך הארז 128, בורגתה',
     ar: 'طريق الأرز 128، بورغاتا',
@@ -17,7 +17,7 @@ export const SITE = {
   geo: { lat: 32.3217, lng: 35.0036 },
   social: {
     facebook: 'https://facebook.com',
-    instagram: 'https://instagram.com',
+    instagram: 'https://www.instagram.com/borgata.farm',
   },
 } as const;
 

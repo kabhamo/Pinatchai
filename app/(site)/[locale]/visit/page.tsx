@@ -23,11 +23,7 @@ export default async function VisitPage({
   setRequestLocale(locale);
   const t = await getTranslations('visit');
 
-  const hours = [
-    { day: t('days.sunThu'), time: t('hours.sunThu') },
-    { day: t('days.fri'), time: t('hours.fri') },
-    { day: t('days.sat'), time: t('hours.sat'), closed: true },
-  ];
+  const hours = [{ day: t('days.allWeek'), time: t('hours.allWeek') }];
 
   const pricing = [
     { label: t('pricing.adult'), price: t('pricing.adultPrice') },
@@ -55,7 +51,7 @@ export default async function VisitPage({
                 {hours.map((row) => (
                   <tr key={row.day} className="border-b border-black/5 last:border-0">
                     <td className="py-3 font-bold text-farm-text">{row.day}</td>
-                    <td className={`py-3 text-end ${row.closed ? 'text-farm-orange' : 'text-farm-text/70'}`} dir="ltr">
+                    <td className="py-3 text-end text-farm-text/70" dir="ltr">
                       {row.time}
                     </td>
                   </tr>

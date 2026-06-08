@@ -9,7 +9,7 @@ import EventCard from '@/components/EventCard';
 import BlogCard from '@/components/BlogCard';
 import SectionHeading from '@/components/SectionHeading';
 import Reveal from '@/components/Reveal';
-import { LocalBusinessJsonLd } from '@/components/JsonLd';
+import { LocalBusinessJsonLd, EventsJsonLd } from '@/components/JsonLd';
 
 const HERO_IMG =
   'https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=1920&q=70';
@@ -45,6 +45,7 @@ export default async function HomePage({
   return (
     <>
       <LocalBusinessJsonLd locale={locale} />
+      <EventsJsonLd events={events} locale={locale} />
 
       {/* Hero */}
       <HeroSection
